@@ -1,0 +1,27 @@
+{
+  "name": "阅读纯净的博客文章（CSDN）",
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "阅读纯净的博客文章，去除广告、文章推荐、顶部导航等。",
+  "permissions": [],
+  "action": {},
+  "content_scripts": [
+    {
+      "matches": ["https://blog.csdn.net/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "icons": {
+    "16": "/images/logo.png",
+    "32": "/images/logo.png",
+    "48": "/images/logo.png",
+    "128": "/images/logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": [ "csdn-styles.css"],
+    "matches": [ "https://blog.csdn.net/*" ]
+  }]
+}
