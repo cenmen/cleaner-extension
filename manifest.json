@@ -1,13 +1,13 @@
 {
-  "name": "阅读纯净的博客文章（CSDN）",
+  "name": "阅读纯净的博客文章",
   "manifest_version": 3,
   "version": "0.1",
-  "description": "阅读纯净的博客文章，去除广告、文章推荐、顶部导航等。",
+  "description": "阅读纯净的博客文章，去除广告、文章推荐、顶部导航等。(CSDN, maimai)",
   "permissions": [],
   "action": {},
   "content_scripts": [
     {
-      "matches": ["https://blog.csdn.net/*"],
+      "matches": ["https://blog.csdn.net/*", "https://maimai.cn/*"],
       "js": ["content-script.js"]
     }
   ],
@@ -20,8 +20,14 @@
   "background": {
     "service_worker": "background.js"
   },
-  "web_accessible_resources": [{
-    "resources": [ "csdn-styles.css"],
-    "matches": [ "https://blog.csdn.net/*" ]
-  }]
+  "web_accessible_resources": [
+    {
+      "resources": ["csdn-styles.css"],
+      "matches": ["https://blog.csdn.net/*"]
+    },
+    {
+      "resources": ["maimai-styles.css"],
+      "matches": ["https://maimai.cn/*"]
+    }
+  ]
 }

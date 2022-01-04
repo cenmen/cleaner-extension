@@ -9,7 +9,9 @@ function injectCSS(file) {
 function start() {
   /* CSDN */
   injectCSS('csdn-styles.css')
-  autoRemoveNodeBySelector('body', '.passport-login-container')
+  autoRemoveNodeBySelector('body', 'passport-login-container')
+  /* maimai */
+  injectCSS('maimai-styles.css')
 }
 
 /**
@@ -21,10 +23,10 @@ function start() {
 function autoRemoveNodeBySelector(listener, name) {
   if (!listener && !name) return
   const _listener = document.querySelector(listener)
-  _listener.addEventListener('DOMNodeInserted', (event, relate) => {
-    console.log(event, relate)
+  _listener.addEventListener('DOMNodeInserted', (event) => {
+    console.log(event)
     const { id, classList } = event.target
-    if (id === name || classList.value.indexOf(name) !== -1) {
+    if (id === name || (classList && classList.value.indexOf(name) !== -1)) {
       console.log('==> removeChild', listener, name);
       const check = document.querySelector(`#${name}`) || document.querySelector(`.${name}`)
       check && _listener.removeChild(event.target)
