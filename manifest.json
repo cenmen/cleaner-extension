@@ -2,12 +2,18 @@
   "name": "阅读纯净的博客文章",
   "manifest_version": 3,
   "version": "0.1",
-  "description": "阅读纯净的博客文章，去除广告、文章推荐、顶部导航等。(CSDN, maimai)",
+  "description": "阅读纯净的博客文章，去除广告、文章推荐、顶部导航等。(CSDN, maimai, 知乎, B站)",
   "permissions": [],
   "action": {},
   "content_scripts": [
     {
-      "matches": ["https://blog.csdn.net/*", "https://maimai.cn/*"],
+      "matches": [
+        "https://maimai.cn/*", 
+        "https://blog.csdn.net/*", 
+        "https://www.zhihu.com/*",
+        "https://zhuanlan.zhihu.com/*", 
+        "https://www.bilibili.com/video/*"
+      ],
       "js": ["content-script.js"]
     }
   ],
@@ -26,8 +32,16 @@
       "matches": ["https://blog.csdn.net/*"]
     },
     {
+      "resources": ["bilibili-styles.css"],
+      "matches": ["https://www.bilibili.com/*"]
+    },
+    {
       "resources": ["maimai-styles.css"],
       "matches": ["https://maimai.cn/*"]
+    },
+    {
+      "resources": ["zhihu-styles.css"],
+      "matches": ["https://zhuanlan.zhihu.com/*"]
     }
   ]
 }
