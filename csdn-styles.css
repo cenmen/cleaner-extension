@@ -13,14 +13,21 @@
   display: none !important;
 }
 
+#mainBox {
+  display: flex;
+  justify-content: center;
+}
+
 /* 左边导航 */
 .blog_container_aside {
-  opacity: 0 !important;
+  /* opacity: 0 !important; */
+  display: none;
 }
 
 /* 右边导航 */
-.recommend-right {
-  opacity: 0 !important;
+#rightAside {
+  /* opacity: 0 !important; */
+  display: none;
 }
 
 /* 右下角悬浮功能 */

@@ -2,7 +2,7 @@
   "name": "阅读纯净的博客文章",
   "manifest_version": 3,
   "version": "0.1",
-  "description": "阅读纯净的博客文章，去除广告、文章推荐、顶部导航等。(CSDN, maimai, 知乎, B站)",
+  "description": "阅读纯净的博客文章，去除广告、文章推荐、顶部导航等。(CSDN, maimai, 知乎, B站, 简书)",
   "permissions": [],
   "action": {},
   "content_scripts": [
@@ -12,7 +12,10 @@
         "https://blog.csdn.net/*", 
         "https://www.zhihu.com/*",
         "https://zhuanlan.zhihu.com/*", 
-        "https://www.bilibili.com/video/*"
+        "https://www.bilibili.com/video/*",
+        "https://www.jianshu.com/*",
+        "https://vue3js.cn/interview/*",
+        "http://www.atguigu.com/*"
       ],
       "js": ["content-script.js"]
     }
@@ -42,6 +45,18 @@
     {
       "resources": ["zhihu-styles.css"],
       "matches": ["https://zhuanlan.zhihu.com/*"]
+    },
+    {
+      "resources": ["jianshu-styles.css"],
+      "matches": ["https://www.jianshu.com/*"]
+    },
+    {
+      "resources": ["interview-styles.css"],
+      "matches": ["https://vue3js.cn/*"]
+    },
+    {
+      "resources": ["atguigu-styles.css"],
+      "matches": ["http://www.atguigu.com/*"]
     }
   ]
 }
