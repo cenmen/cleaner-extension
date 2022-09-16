@@ -1,0 +1,54 @@
+/* 顶部导航 */
+#csdn-toolbar {
+  display: none !important;
+}
+
+/* 底部文章推荐 */
+.insert-baidu-box {
+  display: none !important;
+}
+
+/* 代码块右上角复制按钮 */
+.hljs-button {
+  display: none !important;
+}
+
+#mainBox {
+  display: flex;
+  justify-content: center;
+}
+
+/* 左边导航 */
+.blog_container_aside {
+  /* opacity: 0 !important; */
+  display: none;
+}
+
+/* 右边导航 */
+#rightAside {
+  /* opacity: 0 !important; */
+  display: none;
+}
+
+/* 右下角悬浮功能 */
+.csdn-side-toolbar {
+  opacity: 0 !important;
+}
+
+#content_views pre {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+#content_views pre code {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}

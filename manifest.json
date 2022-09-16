@@ -15,7 +15,9 @@
         "https://www.bilibili.com/video/*",
         "https://www.jianshu.com/*",
         "https://vue3js.cn/interview/*",
-        "http://www.atguigu.com/*"
+        "http://www.atguigu.com/*",
+        "http://bigerfe.com/*",
+        "https://docs.nestjs.com/*"
       ],
       "js": ["content-script.js"]
     }
@@ -31,32 +33,40 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["csdn-styles.css"],
+      "resources": ["/styles/csdn-styles.css"],
       "matches": ["https://blog.csdn.net/*"]
     },
     {
-      "resources": ["bilibili-styles.css"],
+      "resources": ["/styles/bilibili-styles.css"],
       "matches": ["https://www.bilibili.com/*"]
     },
     {
-      "resources": ["maimai-styles.css"],
+      "resources": ["/styles/maimai-styles.css"],
       "matches": ["https://maimai.cn/*"]
     },
     {
-      "resources": ["zhihu-styles.css"],
+      "resources": ["/styles/zhihu-styles.css"],
       "matches": ["https://zhuanlan.zhihu.com/*"]
     },
     {
-      "resources": ["jianshu-styles.css"],
+      "resources": ["/styles/jianshu-styles.css"],
       "matches": ["https://www.jianshu.com/*"]
     },
     {
-      "resources": ["interview-styles.css"],
+      "resources": ["/styles/interview-styles.css"],
       "matches": ["https://vue3js.cn/*"]
     },
     {
-      "resources": ["atguigu-styles.css"],
+      "resources": ["/styles/atguigu-styles.css"],
       "matches": ["http://www.atguigu.com/*"]
+    },
+    {
+      "resources": ["/styles/bigerfe-styles.css"],
+      "matches": ["http://bigerfe.com/*"]
+    },
+    {
+      "resources": ["/styles/nestjs-styles.css"],
+      "matches": ["https://docs.nestjs.com/*"]
     }
   ]
 }

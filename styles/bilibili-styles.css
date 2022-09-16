@@ -1,0 +1,11 @@
+.rec-list {
+  opacity: 0;
+}
+
+.rec-footer {
+  opacity: 0;
+}
+
+#internationalHeader {
+  display: none;
+}
