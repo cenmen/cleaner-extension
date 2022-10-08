@@ -25,19 +25,25 @@ const handler = {
     autoRemoveNodeBySelector('body', 'passport-login-container');
   },
   [HOST.BILIBILI]: () => {
-    injectCSS('/styles/bilibili-styles.css');
-    document.querySelector('#app').style = 'background-color:black;';
-    document.querySelector('.v-wrap').style = 'background-color:black;';
-    const ul = document.querySelector('.bilibili-player-video-btn-speed-menu');
+    // injectCSS('/styles/bilibili-styles.css');
+    // document.querySelector('#app').style = 'background-color:black;';
+    // document.querySelector('.v-wrap').style = 'background-color:black;';
     const createSpeed = speed => {
+      const ul = document.querySelector('.bpx-player-ctrl-playbackrate-menu');
       const element = document.createElement('li');
-      element.classList.add('bilibili-player-video-btn-speed-menu-list');
+      element.classList.add('bpx-player-ctrl-playbackrate-menu-item');
       element.dataset.value = speed;
       element.innerText = `${speed}x`;
+      element.addEventListener('click', () => {
+        document.querySelector('video').playbackRate = speed
+      })
       ul.insertBefore(element, ul.firstChild);
     };
-    createSpeed(2.5);
     setTimeout(() => {
+      createSpeed(2.2);
+      createSpeed(2.4);
+      createSpeed(2.6);
+      createSpeed(2.8);
       createSpeed(3.0);
     }, 3000);
   },
